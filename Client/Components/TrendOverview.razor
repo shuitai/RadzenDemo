@@ -1,0 +1,18 @@
+<RadzenRow>
+    <RadzenColumn Size="12">
+        <RadzenChart>
+            <RadzenColumnSeries Data="@revenue2024" CategoryProperty="Quarter" Title="2024" LineType="LineType.Dashed"
+                                ValueProperty="Revenue">
+                <RadzenSeriesDataLabels Visible="@showDataLabels"/>
+            </RadzenColumnSeries>
+            <RadzenColumnSeries Data="@revenue2023" CategoryProperty="Quarter" Title="2023" ValueProperty="Revenue">
+                <RadzenSeriesDataLabels Visible="@showDataLabels"/>
+            </RadzenColumnSeries>
+            <RadzenColumnOptions Radius="5"/>
+            <RadzenValueAxis Formatter="@FormatAsUSD">
+                <RadzenGridLines Visible="true"/>
+                <RadzenAxisTitle Text="Revenue in USD"/>
+            </RadzenValueAxis>
+        </RadzenChart>
+    </RadzenColumn>
+</RadzenRow>

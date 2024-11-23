@@ -1,0 +1,35 @@
+@page "/"
+<PageTitle>Index</PageTitle>
+<RadzenRow Gap="5" RowGap="5">
+    <RadzenColumn Size="12">
+        <RadzenCardGroup Responsive="@responsive">
+        <RadzenCard Variant="@variant">
+            <RadzenStack JustifyContent="JustifyContent.SpaceBetween" Gap="1rem">
+                <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Start" JustifyContent="JustifyContent.SpaceBetween">
+                    <RadzenText TextStyle="TextStyle.H6">Team 1</RadzenText>
+                    <RadzenText TextStyle="TextStyle.H2" class="rz-m-0">@($"{Math.Round(teamOneProgress)}%")</RadzenText>
+                </RadzenStack>
+                <RadzenProgressBar @bind-Value=@teamOneProgress ShowValue="false" Style="--rz-progressbar-height: 1rem;"/>
+            </RadzenStack>
+        </RadzenCard>
+        <RadzenCard Variant="@variant">
+            <RadzenStack JustifyContent="JustifyContent.SpaceBetween" Gap="1rem">
+                <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Start" JustifyContent="JustifyContent.SpaceBetween">
+                    <RadzenText TextStyle="TextStyle.H6">Team 2</RadzenText>
+                    <RadzenText TextStyle="TextStyle.H2" class="rz-m-0">@($"{Math.Round(teamTwoProgress)}%")</RadzenText>
+                </RadzenStack>
+                <RadzenProgressBar @bind-Value=@teamTwoProgress ShowValue="false" Style="--rz-progressbar-height: 1rem;"/>
+            </RadzenStack>
+        </RadzenCard>
+        <RadzenCard Variant="@variant">
+            <RadzenStack JustifyContent="JustifyContent.SpaceBetween" Gap="1rem">
+                <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Start" JustifyContent="JustifyContent.SpaceBetween">
+                    <RadzenText TextStyle="TextStyle.H6">Team 3</RadzenText>
+                    <RadzenText TextStyle="TextStyle.H2" class="rz-m-0">@($"{Math.Round(teamThreeProgress)}%")</RadzenText>
+                </RadzenStack>
+                <RadzenProgressBar @bind-Value=@teamThreeProgress ShowValue="false" Style="--rz-progressbar-height: 1rem;"/>
+            </RadzenStack>
+        </RadzenCard>
+    </RadzenCardGroup>
+    </RadzenColumn>
+</RadzenRow>

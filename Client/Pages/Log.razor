@@ -1,0 +1,30 @@
+@page "/log"
+
+<PageTitle>Log</PageTitle>
+<RadzenRow class="rz-mb-2">
+    <RadzenColumn Size="12">
+        <RadzenCard>
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Query</RadzenText>
+            <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.End" Gap="1rem" >
+                <RadzenTextArea Style="width: 100%; height: 97px" aria-label="TextArea" />
+                <RadzenButton Text="Execute" ButtonStyle="ButtonStyle.Primary" />
+            </RadzenStack>
+        </RadzenCard>
+    </RadzenColumn>
+</RadzenRow>
+
+<RadzenRow class="rz-mb-2">
+    <RadzenColumn Size="12">
+        <RadzenCard>
+            <TrendOverview/>
+        </RadzenCard>
+    </RadzenColumn>
+</RadzenRow>
+
+<RadzenRow class="rz-mb-2">
+    <RadzenColumn Size="12">
+        <RadzenCard>
+            <DetailListView/>
+        </RadzenCard>
+    </RadzenColumn>
+</RadzenRow>

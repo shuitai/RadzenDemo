@@ -1,0 +1,13 @@
+@using RadzenDemo.Client.Model
+
+<RadzenDataGrid AllowPaging="true" PageSize="3" RowRender="@RowRender" ExpandMode="DataGridExpandMode.Single"
+                    Data="@Products" TItem="Product" RowExpand="RowExpand">
+    <Columns>
+        <RadzenDataGridColumn Property="@nameof(Product.Id)" Title="Id" />
+        <RadzenDataGridColumn Property="@nameof(Product.Name)" Title="Name" />
+        <RadzenDataGridColumn Property="@nameof(Product.Description)" Title="Description" />
+    </Columns>
+    <Template Context="product">
+        <h1>Name: @(product.Name)</h1>
+    </Template>
+</RadzenDataGrid>
